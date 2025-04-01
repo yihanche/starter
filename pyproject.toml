@@ -6,6 +6,9 @@ authors = [
     {name = "yihanche",email = "yihanche@andrew.cmu.edu"}
 ]
 readme = "README.md"
+packages = [
+    {include = "portfolio_analysis"}
+]
 requires-python = ">=3.10"
 dependencies = [
     "skfolio (>=0.8.1,<0.9.0)",
