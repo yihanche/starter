@@ -26,3 +26,25 @@ Run the following command:
 ```
 poetry run jupyter-book build docs/ --all
 ```
+
+### Git工作流
+
+Create you own branch for development
+```
+git checkout -b feature/<new-feature-name>
+# After make modification on your branch
+git add .
+git commit -m "Describe your change"
+git push origin feature/<new-feature-name>
+```
+
+When you finish your code, there are two approaches:
+
++ Method one: Make a Pull Request on Github, when you get the permit, click "Merge Pull Request".
+
++ Method two: Use command line
+```
+git checkout main
+git merge feature/<new-feature-name>
+git push origin main
+```
