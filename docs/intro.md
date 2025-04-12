@@ -9,3 +9,20 @@ Check out the content pages bundled with this sample book to see more.
 
 ```{tableofcontents}
 ```
+
+## Learning Notes
+
+### 符号连接
+To use jupyter notebooks directly from an upper directory, we need to create a symlink to connect, such that it can be recognized:
+```
+cd docs/
+ln -s ../notebooks ./notebooks
+```
+Then you can directly use `- file: notebooks/analysis` in your `docs/_toc.yml`.
+
+### Refresh all html file
+
+Run the following command:
+```
+poetry run jupyter-book build docs/ --all
+```

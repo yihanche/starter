@@ -11,3 +11,4 @@ chapters:
 - file: optimization
 - file: backtest
 - file: conclusion
+- file: notebooks/analysis
