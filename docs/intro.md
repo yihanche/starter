@@ -48,3 +48,24 @@ git checkout main
 git merge feature/<new-feature-name>
 git push origin main
 ```
+
+#### In case you made modification on your main branch code
+
+Stash your changes
+```
+git stash push -m "temporary stash" 
+```
+
+Switch to feature branch
+```
+git checkout existing-feature-branch-name
+```
+or 
+```
+git checkout -b new-feature-branch-name
+```
+
+Apply the stashed changes
+```
+git stash pop
+```

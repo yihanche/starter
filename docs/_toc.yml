@@ -12,3 +12,4 @@ chapters:
 - file: backtest
 - file: conclusion
 - file: notebooks/analysis
+- file: notebooks/max_sharpe
