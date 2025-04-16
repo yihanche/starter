@@ -13,3 +13,4 @@ chapters:
 - file: conclusion
 - file: notebooks/analysis
 - file: notebooks/max_sharpe
+- file: notebooks/black_litterman

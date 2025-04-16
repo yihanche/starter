@@ -191,6 +191,8 @@
 <li class="toctree-l1"><a class="reference internal" href="backtest.html">Backtest result and visualization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conclusion.html">Conclusion and further improvements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/analysis.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/max_sharpe.html">Maximum Sharpe Ratio Portfolio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/black_litterman.html">Black &amp; Litterman Estimator</a></li>
 </ul>
 
     </div>
@@ -389,6 +391,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-notes">Learning Notes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">符号连接</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refresh-all-html-file">Refresh all html file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git">Git工作流</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-case-you-made-modification-on-your-main-branch-code">In case you made modification on your main branch code</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -419,6 +425,8 @@ It does not go in-depth into any particular topic - check out <a class="referenc
 <li class="toctree-l1"><a class="reference internal" href="backtest.html">Backtest result and visualization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conclusion.html">Conclusion and further improvements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/analysis.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/max_sharpe.html">Maximum Sharpe Ratio Portfolio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/black_litterman.html">Black &amp; Litterman Estimator</a></li>
 </ul>
 </div>
 <section id="learning-notes">
@@ -430,7 +438,7 @@ It does not go in-depth into any particular topic - check out <a class="referenc
 <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">../</span><span class="n">notebooks</span> <span class="o">./</span><span class="n">notebooks</span>
 </pre></div>
 </div>
-<p>Then you can directly use <code class="docutils literal notranslate"><span class="pre">notebooks/analysis</span></code> in your docs/_toc.yml</p>
+<p>Then you can directly use <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">file:</span> <span class="pre">notebooks/analysis</span></code> in your <code class="docutils literal notranslate"><span class="pre">docs/_toc.yml</span></code>.</p>
 </section>
 <section id="refresh-all-html-file">
 <h3>Refresh all html file<a class="headerlink" href="#refresh-all-html-file" title="Link to this heading">#</a></h3>
@@ -438,6 +446,46 @@ It does not go in-depth into any particular topic - check out <a class="referenc
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span> <span class="n">run</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="n">docs</span><span class="o">/</span> <span class="o">--</span><span class="nb">all</span>
 </pre></div>
 </div>
+</section>
+<section id="git">
+<h3>Git工作流<a class="headerlink" href="#git" title="Link to this heading">#</a></h3>
+<p>Create you own branch for development</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">feature</span><span class="o">/&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="c1"># After make modification on your branch</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Describe your change&quot;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">feature</span><span class="o">/&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>When you finish your code, there are two approaches:</p>
+<ul class="simple">
+<li><p>Method one: Make a Pull Request on Github, when you get the permit, click “Merge Pull Request”.</p></li>
+<li><p>Method two: Use command line</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">feature</span><span class="o">/&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<section id="in-case-you-made-modification-on-your-main-branch-code">
+<h4>In case you made modification on your main branch code<a class="headerlink" href="#in-case-you-made-modification-on-your-main-branch-code" title="Link to this heading">#</a></h4>
+<p>Stash your changes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="n">push</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;temporary stash&quot;</span> 
+</pre></div>
+</div>
+<p>Switch to feature branch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">existing</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">new</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>Apply the stashed changes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="n">pop</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 </section>
@@ -500,6 +548,10 @@ It does not go in-depth into any particular topic - check out <a class="referenc
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-notes">Learning Notes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">符号连接</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refresh-all-html-file">Refresh all html file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git">Git工作流</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-case-you-made-modification-on-your-main-branch-code">In case you made modification on your main branch code</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
