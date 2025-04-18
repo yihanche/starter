@@ -13,4 +13,6 @@ chapters:
 - file: conclusion
 - file: notebooks/analysis
 - file: notebooks/max_sharpe
+- file: notebooks/empirical_estimation
 - file: notebooks/black_litterman
+- file: notebooks/factor_model

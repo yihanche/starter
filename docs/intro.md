@@ -69,3 +69,12 @@ Apply the stashed changes
 ```
 git stash pop
 ```
+
+### Prior Estimator
+
+The investor's prior beliefs about assets' return and covariance.
+
+Popular Prior:
++ [Empirical](notebooks/empirical_estimation.ipynb)
++ [Black & Litterman](notebooks/black_litterman.ipynb)
++ [Factor Model](notebooks/factor_model.ipynb)
