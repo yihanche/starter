@@ -49,7 +49,13 @@ git merge feature/<new-feature-name>
 git push origin main
 ```
 
-#### In case you made modification on your main branch code
+#### How to deal with conflicts (in Version Control)
+
+**ALWAYS** 
++ Make sure that you are at the main branch
+    + And it's up-to-date (you have done `git pull origin main` **= fetch + merge/rebase**)
+
+#### In case you made modification on your main branch code, but you want to save these in your designated feature branch
 
 Stash your changes
 ```
@@ -68,6 +74,48 @@ git checkout -b new-feature-branch-name
 Apply the stashed changes
 ```
 git stash pop
+```
+
+#### In case you forget to do git pull, and you have modified some files, and the latest Version in main happens to update the same file
+
+You want to do `git pull` but see conflicts.
+
+Make sure you're at the feature branch
+```
+git checkout feature-branch-name
+```
+
+Update remote repo
+```
+git fetch origin
+```
+
+Use `rebase` to load main branch's newest version and reply your implementations after that
+```
+git rebase origin/main
+```
+注意是用`/`而不是空格
+
+####每次写码前必做的
+
+确认自己所处的分支
+```
+git status
+```
+
+切换分支
+```
+git checkout feature-branch-name
+```
+
+从远程拉取最新版本，但不合并
+```
+git fetch origin
+```
+
+安全合并
+```
+git merge origin/main
 ```
 
 ### Prior Estimator
