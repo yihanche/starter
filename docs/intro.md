@@ -90,9 +90,9 @@ Update remote repo
 git fetch origin
 ```
 
-Use `rebase` to load main branch's newest version and reply your implementations after that
+Use `merge` to load main branch's newest version and manually merge your implementations
 ```
-git rebase origin/main
+git merge origin/main
 ```
 注意是用`/`而不是空格
 
