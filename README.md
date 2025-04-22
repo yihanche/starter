@@ -4,4 +4,3 @@ main branch 有更新，但目前在feature branch的旧版本上进行操作，
 
 Main brach changed the 5th line in READMA.md
 
-Some test with git merge.
