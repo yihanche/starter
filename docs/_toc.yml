@@ -3,16 +3,31 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
-- file: data
-- file: optimization
-- file: backtest
-- file: conclusion
-- file: notebooks/analysis
-- file: notebooks/max_sharpe
-- file: notebooks/empirical_estimation
-- file: notebooks/black_litterman
-- file: notebooks/factor_model
+parts:
+  - caption: Intro of Jupyter Book and Git
+    chapters:
+      - file: markdown
+      - file: notebooks
+      - file: markdown-notebooks
+
+  - caption: Pipeline
+    chapters:
+      - file: data
+      - file: optimization
+      - file: backtest
+      - file: conclusion
+      - file: notebooks/analysis
+
+  - caption: Mean-Risk
+    chapters:
+      - file: notebooks/max_sharpe
+        title: "Baseline: Max Sharpe"
+    
+      - file: notebooks/empirical_estimation
+        title: "Prior Estimator: Empirical"
+
+      - file: notebooks/black_litterman
+        title: "Prior Estimator: Black-Litterman"
+
+      - file: notebooks/factor_model
+        title: "Prior Estimator: Factor Model"
