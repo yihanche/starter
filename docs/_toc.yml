@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Intro of Jupyter Book and Git
+  - caption: Overview of Jupyter Book
     chapters:
       - file: markdown
       - file: notebooks
@@ -31,3 +31,6 @@ parts:
 
       - file: notebooks/factor_model
         title: "Prior Estimator: Factor Model"
+
+      - file: notebooks/black_litterman_factor_model
+        title: "Prior Estimator: Black-Litterman Factor Model"

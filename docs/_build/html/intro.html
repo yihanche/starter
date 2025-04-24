@@ -182,19 +182,26 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro of Jupyter Book and Git</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pipeline</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="data.html">Data analysis techniques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="optimization.html">Analysis on investment portfolio optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="backtest.html">Backtest result and visualization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conclusion.html">Conclusion and further improvements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/analysis.html">Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/max_sharpe.html">Maximum Sharpe Ratio Portfolio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/empirical_estimation.html">Empirical Estimator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/black_litterman.html">Black &amp; Litterman Estimator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/factor_model.html">Factor Model Estimator</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mean-Risk</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/max_sharpe.html">Baseline: Max Sharpe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/empirical_estimation.html">Prior Estimator: Empirical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/black_litterman.html">Prior Estimator: Black-Litterman</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/factor_model.html">Prior Estimator: Factor Model</a></li>
 </ul>
 
     </div>
@@ -394,7 +401,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">符号连接</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refresh-all-html-file">Refresh all html file</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git">Git工作流</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-case-you-made-modification-on-your-main-branch-code">In case you made modification on your main branch code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-deal-with-conflicts-in-version-control">How to deal with conflicts (in Version Control)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-case-you-made-modification-on-your-main-branch-code-but-you-want-to-save-these-in-your-designated-feature-branch">In case you made modification on your main branch code, but you want to save these in your designated feature branch</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-case-you-forget-to-do-git-pull-and-you-have-modified-some-files-and-the-latest-version-in-main-happens-to-update-the-same-file">In case you forget to do git pull, and you have modified some files, and the latest Version in main happens to update the same file</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prior-estimator">Prior Estimator</a></li>
@@ -419,19 +428,30 @@ It shows off a few of the major file types, as well as some sample content.
 It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
 <p>Check out the content pages bundled with this sample book to see more.</p>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro of Jupyter Book and Git</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pipeline</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="data.html">Data analysis techniques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="optimization.html">Analysis on investment portfolio optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="backtest.html">Backtest result and visualization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conclusion.html">Conclusion and further improvements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/analysis.html">Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/max_sharpe.html">Maximum Sharpe Ratio Portfolio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/empirical_estimation.html">Empirical Estimator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/black_litterman.html">Black &amp; Litterman Estimator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/factor_model.html">Factor Model Estimator</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mean-Risk</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/max_sharpe.html">Baseline: Max Sharpe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/empirical_estimation.html">Prior Estimator: Empirical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/black_litterman.html">Prior Estimator: Black-Litterman</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/factor_model.html">Prior Estimator: Factor Model</a></li>
 </ul>
 </div>
 <section id="learning-notes">
@@ -472,8 +492,19 @@ It does not go in-depth into any particular topic - check out <a class="referenc
 <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">main</span>
 </pre></div>
 </div>
-<section id="in-case-you-made-modification-on-your-main-branch-code">
-<h4>In case you made modification on your main branch code<a class="headerlink" href="#in-case-you-made-modification-on-your-main-branch-code" title="Link to this heading">#</a></h4>
+<section id="how-to-deal-with-conflicts-in-version-control">
+<h4>How to deal with conflicts (in Version Control)<a class="headerlink" href="#how-to-deal-with-conflicts-in-version-control" title="Link to this heading">#</a></h4>
+<p><strong>ALWAYS</strong></p>
+<ul class="simple">
+<li><p>Make sure that you are at the main branch</p>
+<ul>
+<li><p>And it’s up-to-date (you have done <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">origin</span> <span class="pre">main</span></code> <strong>= fetch + merge/rebase</strong>)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="in-case-you-made-modification-on-your-main-branch-code-but-you-want-to-save-these-in-your-designated-feature-branch">
+<h4>In case you made modification on your main branch code, but you want to save these in your designated feature branch<a class="headerlink" href="#in-case-you-made-modification-on-your-main-branch-code-but-you-want-to-save-these-in-your-designated-feature-branch" title="Link to this heading">#</a></h4>
 <p>Stash your changes</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="n">push</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;temporary stash&quot;</span> 
 </pre></div>
@@ -488,6 +519,40 @@ It does not go in-depth into any particular topic - check out <a class="referenc
 </div>
 <p>Apply the stashed changes</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">stash</span> <span class="n">pop</span>
+</pre></div>
+</div>
+</section>
+<section id="in-case-you-forget-to-do-git-pull-and-you-have-modified-some-files-and-the-latest-version-in-main-happens-to-update-the-same-file">
+<h4>In case you forget to do git pull, and you have modified some files, and the latest Version in main happens to update the same file<a class="headerlink" href="#in-case-you-forget-to-do-git-pull-and-you-have-modified-some-files-and-the-latest-version-in-main-happens-to-update-the-same-file" title="Link to this heading">#</a></h4>
+<p>You want to do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> but see conflicts.</p>
+<p>Make sure you’re at the feature branch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">feature</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>Update remote repo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span>
+</pre></div>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">merge</span></code> to load main branch’s newest version and manually merge your implementations</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">merge</span> <span class="n">origin</span><span class="o">/</span><span class="n">main</span>
+</pre></div>
+</div>
+<p>注意是用<code class="docutils literal notranslate"><span class="pre">/</span></code>而不是空格</p>
+<p>####每次写码前必做的</p>
+<p>确认自己所处的分支</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>切换分支</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">feature</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>从远程拉取最新版本，但不合并</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span>
+</pre></div>
+</div>
+<p>安全合并</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">merge</span> <span class="n">origin</span><span class="o">/</span><span class="n">main</span>
 </pre></div>
 </div>
 </section>
@@ -564,7 +629,9 @@ It does not go in-depth into any particular topic - check out <a class="referenc
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">符号连接</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refresh-all-html-file">Refresh all html file</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git">Git工作流</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-case-you-made-modification-on-your-main-branch-code">In case you made modification on your main branch code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-deal-with-conflicts-in-version-control">How to deal with conflicts (in Version Control)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-case-you-made-modification-on-your-main-branch-code-but-you-want-to-save-these-in-your-designated-feature-branch">In case you made modification on your main branch code, but you want to save these in your designated feature branch</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-case-you-forget-to-do-git-pull-and-you-have-modified-some-files-and-the-latest-version-in-main-happens-to-update-the-same-file">In case you forget to do git pull, and you have modified some files, and the latest Version in main happens to update the same file</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prior-estimator">Prior Estimator</a></li>
