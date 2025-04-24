@@ -29,12 +29,19 @@ poetry run jupyter-book build docs/ --all
 
 ### Git工作流
 
-Create you own branch for development
+Create you own branch for development.
 ```
 git checkout -b feature/<new-feature-name>
-# After make modification on your branch
+```
+
+After make modification on your branch. **It is recommended to do frequent add and commit to isolate changes.**
+```
 git add .
 git commit -m "Describe your change"
+```
+
+Push your commit (single or multiple) to the repo.
+```
 git push origin feature/<new-feature-name>
 ```
 
