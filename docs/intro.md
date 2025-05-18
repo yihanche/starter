@@ -60,7 +60,7 @@ git push origin main
 
 **ALWAYS** 
 + Make sure that you are at the main branch
-    + And it's up-to-date (you have done `git pull origin main` **= fetch + merge/rebase**)
+    + And it's up-to-date (you have done `git pull origin main` **= fetch + merge** or `git pull --rebase` **= fetch + rebase**)
 
 #### In case you made modification on your main branch code, but you want to save these in your designated feature branch
 
@@ -103,7 +103,7 @@ git merge origin/main
 ```
 注意是用`/`而不是空格
 
-####每次写码前必做的
+#### 每次写码前必做的
 
 确认自己所处的分支
 ```
